@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body class="flex-align-baseline">
+    <form role="form" id="regForm" class="row center-form center-form-margin-top">
+        <input type="text" placeholder="Enter your name" class="form-control wide-input" id="login" required />
+        <button class="btn btn-primary btn-margin-top" type="submit">Start game</button>
+    </form>
+
+    <form id="waitingForm" class="center-form center-form-margin-top display-none">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active progress-bar-zero" role="progressbar"
+                 aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" id="progress">
+                Waiting for another player...
+            </div>
+        </div>
+        <button class="btn btn-danger btn-center btn-sm" id="cancel-btn">Cancel</button>
+    </form>
+
+    <div id="game" class="display-none">
+        <h2>Game is on...</h2>
+    </div>
+
+    <script src="~/Scripts/lib/jquery-1.9.1.min.js"></script>
+    <!--Ссылка на библиотеку SignalR -->
+    <script src="~/Scripts/lib/jquery.signalR-2.2.1.min.js"></script>
+
+    <script src="~/Scripts/lib/require.min.js"></script>
+    <script src="~/Scripts/require.config.js"></script>
+    <script src="~/Scripts/pages/registration.page.js"></script>
+
+</body>
+</html>

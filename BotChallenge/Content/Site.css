@@ -1,0 +1,73 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+    -ms-flex-align: center; /* You know the drill now… */
+    -webkit-align-items: center;
+
+    -webkit-box-pack: center; -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+    height: 100%;
+    width: 100% /* needed for Firefox */
+}
+
+.flex-align-center{
+    align-items: center;
+}
+
+.flex-align-baseline{
+    align-items: baseline;
+}
+
+.center-form{
+    display: -webkit-box; display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-align: center; -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 10rem;
+}
+
+.center-form-margin-top{
+    margin-top: 50px;
+}
+
+
+.wide-input{
+    width: 400px ! important;
+}
+
+.btn-margin-top{
+    margin-top: 10px;
+}
+
+.progress-bar-zero{
+    width: 0px;
+}
+
+.progress-bar-wide{
+    width: 600px !important;
+}
+
+.display-none{
+    display: none !important;
+}
