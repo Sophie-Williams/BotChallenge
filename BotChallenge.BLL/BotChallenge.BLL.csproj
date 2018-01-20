@@ -30,16 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLModule.cs" />
     <Compile Include="Entities\Bot.cs" />
     <Compile Include="Entities\DTO\CompilationResultDTO.cs" />
     <Compile Include="Entities\Enums\PointType.cs" />
@@ -65,8 +71,16 @@
     <Compile Include="Entities\Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\ResultOfGame\Command.cs" />
+    <Compile Include="Prototypes\IDAService.cs" />
+    <Compile Include="Prototypes\IUserService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="DependencyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BotChallenge.DAL\BotChallenge.DAL.csproj">
+      <Project>{6e9524b5-369b-4e69-96ef-9b6cb8366686}</Project>
+      <Name>BotChallenge.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BotChallenge.LanguageCompiler\BotChallenge.Compiler.csproj">
       <Project>{a7cba876-442a-4673-b40e-bb537a44b583}</Project>
       <Name>BotChallenge.Compiler</Name>
@@ -74,6 +88,10 @@
     <ProjectReference Include="..\BotChallenge.Runner\BotChallenge.Runner.csproj">
       <Project>{44d47dfa-7434-4faa-9183-bd722bbbc521}</Project>
       <Name>BotChallenge.Runner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BotChallenge.Shared\BotChallenge.Shared.csproj">
+      <Project>{52036fd7-bbb9-41eb-a782-929bbb3fcf45}</Project>
+      <Name>BotChallenge.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

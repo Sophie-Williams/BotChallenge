@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge", "BotChallenge\BotChallenge.csproj", "{4B381B40-6E62-47D8-B8BB-0DF89BFE23A7}"
 EndProject
@@ -13,9 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge.Compiler", "Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge.Runner", "BotChallenge.Runner\BotChallenge.Runner.csproj", "{44D47DFA-7434-4FAA-9183-BD722BBBC521}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BotChallenge.Tests", "BotChallenge.Tests", "{98952305-179C-413E-9F21-4C68C0D27B5D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge.BLL.UnitTests", "BotChallenge.BLL.UnitTests\BotChallenge.BLL.UnitTests.csproj", "{B3232C9F-4FC8-4F77-878D-D7E8604B008A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge.DAL", "BotChallenge.DAL\BotChallenge.DAL.csproj", "{6E9524B5-369B-4E69-96EF-9B6CB8366686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotChallenge.Shared", "BotChallenge.Shared\BotChallenge.Shared.csproj", "{52036FD7-BBB9-41EB-A782-929BBB3FCF45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,11 +51,26 @@ Global
 		{B3232C9F-4FC8-4F77-878D-D7E8604B008A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3232C9F-4FC8-4F77-878D-D7E8604B008A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3232C9F-4FC8-4F77-878D-D7E8604B008A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9524B5-369B-4E69-96EF-9B6CB8366686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9524B5-369B-4E69-96EF-9B6CB8366686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9524B5-369B-4E69-96EF-9B6CB8366686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9524B5-369B-4E69-96EF-9B6CB8366686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52036FD7-BBB9-41EB-A782-929BBB3FCF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52036FD7-BBB9-41EB-A782-929BBB3FCF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52036FD7-BBB9-41EB-A782-929BBB3FCF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52036FD7-BBB9-41EB-A782-929BBB3FCF45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B3232C9F-4FC8-4F77-878D-D7E8604B008A} = {98952305-179C-413E-9F21-4C68C0D27B5D}
+		{141DD7A3-4548-4FA8-AD57-4EF7F0A4239D} = {5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}
+		{61F5497F-5130-43A3-ADA9-EF4677FD1886} = {5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}
+		{A7CBA876-442A-4673-B40E-BB537A44B583} = {5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}
+		{44D47DFA-7434-4FAA-9183-BD722BBBC521} = {5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}
+		{B3232C9F-4FC8-4F77-878D-D7E8604B008A} = {5D5A89A1-9D7F-41F1-894B-ACBCF74F89D5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {443A7693-F2DF-43A6-A44A-6DCF10F16E3D}
 	EndGlobalSection
 EndGlobal
